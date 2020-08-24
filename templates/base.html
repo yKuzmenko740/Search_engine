@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col s4">
             <div class="center">
-                <i class="large material-icons" style="color: #EE6E73">flash_on</i>
+                <i class="large material-icons" style="color: black">flash_on</i>
                 <p style="font-weight:bold">Fast OLX/Prom web scraper</p>
                 <p class="light center">Scrape away right here with a beautiful GUI</p>
             </div>
@@ -33,7 +33,7 @@
 
         <div class="col s4">
             <div class="center">
-                <i class="large material-icons" style="color: orange">camera</i>
+                <i class="large material-icons" style="color: black">camera</i>
                 <p style="font-weight:bold">Filter your searches</p>
                 <p class="light center">We built in functionality to filter based on pricing</p>
             </div>
@@ -41,7 +41,7 @@
 
         <div class="col s4">
             <div class="center">
-                <i class="large material-icons" style="color: blue">chrome_reader_mode</i>
+                <i class="large material-icons" style="color: black">chrome_reader_mode</i>
                 <p style="font-weight:bold">Easygoing GUI</p>
                 <p class="light center">Scrape easy and fast</p>
             </div>
@@ -50,7 +50,7 @@
 
     <form action="{% url 'new_search' %}" method="post"> {% csrf_token %}
             <input type="text" name="search" placeholder="Search">
-            <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action">Submit
+            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
                 <i class="material-icons right">chevron_right</i>
             </button>
     </form>
