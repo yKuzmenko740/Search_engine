@@ -26,8 +26,12 @@ def new_search(request):
         tab_url = tab.find('a').get('href')
         tab_price = tab.find('p', 'price').text.strip()
         tab_date_city = tab.find('td', 'bottom-cell').text.replace('\n', " ").strip()
+        if tab.find('img', 'fleft'):
+            tab_img_url = tab.find('img', 'fleft').get('src')
+        else:
+            tab_img_url = "https://748073e22e8db794416a-cc51ef6b37841580002827d4d94d19b6.ssl.cf3.rackcdn.com/not-found.png"
 
-        final_tabs.append((tabs_title, tab_url, tab_price, tab_date_city))
+        final_tabs.append((tabs_title, tab_url, tab_price, tab_date_city, tab_img_url))
     request_for_frontend = {
         'search': search,
         'final_tabs': final_tabs,

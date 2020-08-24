@@ -2,57 +2,28 @@
 
 {% block content %}
     <h2 style="text-align: center">{{search | title}}</h2>
-
-    {% for tab in final_tabs %}
-        <p>{{ tab.0 }}</p>
-        <p>{{ tab.1 }}</p>
-        <p>{{ tab.2 }}</p>
-        <p>{{ tab.3 }}</p>
-    {% endfor %}
-
     <div class="row">
+        {% for tab in final_tabs %}
         <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://i.pinimg.com/originals/6c/22/3a/6c223a40abb38e1f726aa190f2d9fcaa.jpg" alt=""></a>
+            <div class="card" style="height: 400px; overflow: hidden">
+                <div class="card-image" style="height: 250px; overflow: hidden;">
+                    <a href="{{ tab.1 }}"><img src="{{ tab.4 }}" alt=""></a>
                 </div>
                 <div class="card-content">
-                    <p>TEST</p>
+                    <p>{{ tab.0 }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/">View listing: Price TEST</a>
+                    <a href="{{ tab.1 }}">View listing: Price: {{ tab.2 }}</a>
                 </div>
             </div>
-        </div>
 
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://i.pinimg.com/originals/6c/22/3a/6c223a40abb38e1f726aa190f2d9fcaa.jpg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price TEST</a>
-                </div>
-            </div>
         </div>
-
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://i.pinimg.com/originals/6c/22/3a/6c223a40abb38e1f726aa190f2d9fcaa.jpg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price TEST</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+
+
+
+
 {% endblock content %}
 
 
