@@ -1,0 +1,13 @@
+.card {
+    height: 400px;
+    overflow: hidden
+}
+
+.card-image{
+    height: 250px;
+    overflow: hidden;
+}
+.search-res{
+    font-size: 10px;
+    text-align: center
+}

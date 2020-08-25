@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from . import models
 
-BASE_OLX_URL = 'https://www.olx.ua/uk/list/q-{}/'
+BASE_OLX_URL = 'https://www.olx.ua/uk/{}/q-{}/'
+CITIES = ['Kiev', 'Dnepr', 'Kharkov', 'Odessa', 'Lvov']
 
 
 def home(request):
@@ -12,8 +13,13 @@ def home(request):
 
 def new_search(request):
     search = request.POST.get('search')
-    models.Search.objects.create(search=search)
-    final_url = BASE_OLX_URL.format(search.replace(" ", "-"))
+    city = request.POST.get('city')
+    models.Search.objects.create(search=search,city=city)
+    if city in CITIES:
+        final_url = BASE_OLX_URL.format(city,search.replace(" ", "-"))
+    else:
+        final_url = BASE_OLX_URL.format('list',search.replace(" ", "-"))
+    print(final_url)
     response = requests.get(final_url)
     data = response.text
 

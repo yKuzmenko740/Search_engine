@@ -50,6 +50,7 @@
 
     <form action="{% url 'new_search' %}" method="post"> {% csrf_token %}
             <input type="text" name="search" placeholder="Search">
+            <input type="text" name="city" placeholder="City">
             <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
                 <i class="material-icons right">chevron_right</i>
             </button>
