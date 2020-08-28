@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
-    <h2 style="text-align: center">{{search | title}}</h2>
+    <h2 style="text-align: center; font-weight: bold">{{search | title}}</h2>
     <div class="row">
         {% for tab in final_tabs %}
         <div class="col s4">
@@ -13,7 +13,7 @@
                     <p>{{ tab.0 }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="{{ tab.1 }}">View listing: Price: {{ tab.2 }}</a>
+                   <a href="{{ tab.1 }}" style="color:black"><span>{{ tab.2 }}</span><br>{{ tab.3 }}</a>
                 </div>
             </div>
 

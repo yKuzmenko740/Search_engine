@@ -1,3 +1,23 @@
+div.main_body{
+    background-color: #FFFFF0;
+}
+/* BASE PAGE */
+.container h1{
+    text-align: center;
+     font-size: 40px;
+}
+p.under_ics{
+    font-size: 1.2em;
+    font-weight:bold
+}
+p.light.center{
+    color: #483D8B;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/* SEARCH RESULT */
 .card {
     height: 400px;
     overflow: hidden
@@ -7,7 +27,20 @@
     height: 250px;
     overflow: hidden;
 }
-.search-res{
-    font-size: 10px;
-    text-align: center
+.card-content p{
+    color: black;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+}
+.card-action span{
+    color:#483D8B;
+    font-size: 15px;
+    font-weight:bold;
+}
+.card-action{
+    color: white;
+    font-size:12px;
 }
